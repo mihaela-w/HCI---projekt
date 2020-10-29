@@ -1,14 +1,17 @@
 import React from 'react'
+ 
+  import styles from './style.module.css'
+ 
+  const navTabs = ['Home', 'Accommodation', 'Photo Gallery', 'Contact']
+ 
+  const NavigationBar = props => (
+    <nav className={styles.navigationBar}>
+        {navTabs.map(tab => <li className={tab === props.activeTab ? styles.active : ''}>
+          {tab}</li>
+        )}
+    </nav>
+  )
 
-import styles from './style.module.css'
-
-const NavigationBar = () => (
-  <nav className={styles.navigationBar}>
-      <li className={styles.active}>Home</li>
-      <li>Accommodation</li>
-      <li>Photo gallery</li>
-      <li>Contact</li>
-  </nav>
-)
-
-export default NavigationBar
+  
+ 
+  export default NavigationBar
