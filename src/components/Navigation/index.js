@@ -4,10 +4,10 @@ import NavigationBar from '../NavigationBar'
 import Combobox from '../Combobox'
 import styles from './style.module.css'
 
-const Navigation = ({ activeTab }) => (
-  <section>
-      <NavigationBar activeTab={activeTab} />
-      <Combobox />
+const Navigation = (props) => (
+  <section className={styles.navigation}>
+    <NavigationBar activeTab={props.activeTab} />
+    <Combobox />
   </section>
 )
 
